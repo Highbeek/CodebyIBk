@@ -8,8 +8,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import bootstrap from "../assets/tech/bootstrap.png";
 import firebase from "../assets/tech/firebase.png";
-import expo from '../assets/tech/expo.png'
-import next from '../assets/tech/next.png'
+import expo from "../assets/tech/expo.png";
+import next from "../assets/tech/next.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -40,6 +40,7 @@ import vivid from "../assets/vivid.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import doc from "./doc.png"
 
 export {
   logo,
@@ -81,4 +82,5 @@ export {
   maths,
   cart,
   firebase,
+  doc,
 };

@@ -34,6 +34,7 @@ import {
   tripguide,
   threejs,
   cart,
+  doc,
 } from "../assets";
 
 export const navLinks = [
@@ -128,16 +129,19 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Freelance",
+    company_name: "Gomycode",
     icon: "",
     iconBg: "#383E56",
     date: "April 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-      "Volunteered in open source projects",
+      "Volunteered as part of an open-source contribution, collaborating with a team of developers to create and maintain web applications.",
+      "Contributed to open-source projects as part of a development team, focusing on web applications and mobile apps.",
+      "Developed and maintained web applications, utilizing React.js & React Native for responsive UI design and enhanced user experience.",
+      "Employed Git for version control and effective collaboration with team members.",
+      "Worked as a freelance web developer, specializing in React.js and related technologies.",
+      "Collaborated with cross-functional teams to deliver high-quality products, ensuring responsive design and cross-browser compatibility.",
+      "Participated in code reviews and provided valuable feedback to improve development practices.",
+      "Completed various projects, including an e-commerce app, social media clone, dashboard, movie website, educational game, and so much more.",
     ],
   },
 
@@ -232,6 +236,27 @@ const projects = [
     ],
     image: linkedin,
     source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
+  },
+  {
+    name: "Doc Appointment",
+    description:
+      "The Doctors Appointment App aims to simplify the process of scheduling appointments with doctors. It provides a comprehensive platform where users can search for doctors based on their specialties, view their profiles and availability, and book appointments at their preferred time slots. ",
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react-threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: doc,
+    source_code_link: "https://tinyurl.com/47dn8jnd",
   },
   {
     name: "Pop & Chill",
