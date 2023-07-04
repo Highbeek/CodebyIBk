@@ -42,16 +42,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl  leading-[30px]"
       >
-        As a dedicated front-end developer with a passion for creating
-        outstanding user interfaces and web applications, I am also venturing
-        into the realm of mobile development. While my primary focus is on
-        front-end technologies such as JavaScript and frameworks like React, I
-        am actively learning and mastering React Native for building captivating
-        mobile applications. With a strong foundation in front-end development
-        and a growing expertise in mobile development, I am committed to
-        delivering seamless and engaging experiences across platforms. Let's
-        collaborate to turn your ideas into visually stunning and user-friendly
-        web and mobile applications.
+        As a front-end developer, I specialize in leveraging React, React
+        Native, and other modern technologies to create exceptional user
+        interfaces and applications. With expertise in JavaScript and React, I
+        have also mastered React Native for building captivating mobile apps.
+        Let's collaborate to bring your ideas to life with seamless and
+        user-friendly web and mobile experiences, powered by React and React
+        Native.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

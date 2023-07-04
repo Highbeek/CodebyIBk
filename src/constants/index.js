@@ -140,8 +140,6 @@ const experiences = [
       "Employed Git for version control and effective collaboration with team members.",
       "Worked as a freelance web developer, specializing in React.js and related technologies.",
       "Collaborated with cross-functional teams to deliver high-quality products, ensuring responsive design and cross-browser compatibility.",
-      "Participated in code reviews and provided valuable feedback to improve development practices.",
-      "Completed various projects, including an e-commerce app, social media clone, dashboard, movie website, educational game, and so much more.",
     ],
   },
 
@@ -152,92 +150,29 @@ const experiences = [
     iconBg: "#383E56",
     date: "Nov 2020 - Apr 2022",
     points: [
-      "Built operational reporting in Excel and Power bi to find areas of improvement for operations resulting in annual incremental revenue.",
-      "Increased revenue by over 20% through analysis of data surrounding market behaviors, vendor relationships,stakeholder goals, and workflows",
-      "Researched and prepared presentations for the Management level regarding profitability",
-      "Modeled data to generate reports comparing business process evolution, assisted management with appropriate KPIs based on improved operations, participated in product development, and planned and provided vital insights based on predictive modeling, which allowed Project managers to circumvent money owed by clients to the minimum.",
-      "Analyzed financial reporting in Tableau and Power Bi, which led to improved savings from the ineffective vendor and business subscriptions",
-      "Monitored all payments and expenditures, including payroll, purchase orders, invoices, and account statements, decreasing errors by 23% through organized digital and paper files.",
+      "Developed operational reporting in Excel and Power BI to increase revenue and identify areas for improvement.",
+      "Increased revenue by over 20% through data analysis of market behaviors, vendor relationships, and workflows.",
+      "Utilized Tableau and Power BI to analyze financial reporting, resulting in cost savings.",
+      "Streamlined payment and expenditure monitoring, reducing errors by 23% through organized files",
     ],
   },
 ];
 
 const testimonials = [
-  // {
-  //   testimonial:
-  //     "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-  //   name: "Sara Lee",
-  //   designation: "CFO",
-  //   company: "Acme Co",
-  //   image: "https://randomuser.me/api/portraits/women/4.jpg",
-  // },
+  {
+    testimonial:
+      "I would like to speciallly thank Only Ibukun in the frontend team who was ready with zeal to deliver regardless weather he knows it all or not and i appreciate that will both didnt regret the journey.",
+    name: "Yemi O.FCAS",
+    designation: "Senior Developer",
+    company: "De-Benedict NGO",
+    image:
+      "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
+  },
 ];
 
 const projects = [
   {
-    name: "Dashboard",
-    description:
-      "An admin Dashboard that is aimed to allow user register and upload an excel/csv file , with a certain template, which gets analysed and user is able to view visualization of data.(In-view)",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "material ui",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: dashboard,
-    source_code_link: "https://github.com/Highbeek/React-DashBoard",
-  },
-  {
-    name: "Sapa",
-    description:
-      "The website showcases 'saPA' a fundraising app focused on spreading happiness and fostering mutual support. It provides easy access to search, explore, learn about the platform, and sign in for users interested in contributing and discovering more.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "bootsrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: sapa,
-    source_code_link: "https://github.com/Highbeek/Sapa-App",
-  },
-  {
-    name: "Linkedin Clone",
-    description:
-      "A LinkedIn clone offering user registration, login, and profile functionality, allowing users to post messages, view others' posts, and log out with a click on their profile image.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: linkedin,
-    source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
-  },
-  {
+    id: 1,
     name: "Doc Appointment",
     description:
       "The Doctors Appointment App aims to simplify the process of scheduling appointments with doctors. It provides a comprehensive platform where users can search for doctors based on their specialties, view their profiles and availability, and book appointments at their preferred time slots. ",
@@ -259,6 +194,73 @@ const projects = [
     source_code_link: "https://tinyurl.com/47dn8jnd",
   },
   {
+    id: 2,
+    name: "Dashboard",
+    description:
+      "An admin Dashboard that is aimed to allow user register and upload an excel/csv file , with a certain template, which gets analysed and user is able to view visualization of data.(In-view)",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "material ui",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dashboard,
+    source_code_link: "https://github.com/Highbeek/React-DashBoard",
+  },
+  {
+    id: 3,
+    name: "Sapa",
+    description:
+      "The website showcases 'saPA' a fundraising app focused on spreading happiness and fostering mutual support. It provides easy access to search, explore, learn about the platform, and sign in for users interested in contributing and discovering more.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootsrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sapa,
+    source_code_link: "https://github.com/Highbeek/Sapa-App",
+  },
+  {
+    id: 4,
+    name: "Linkedin Clone",
+    description:
+      "A LinkedIn clone offering user registration, login, and profile functionality, allowing users to post messages, view others' posts, and log out with a click on their profile image.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: linkedin,
+    source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
+  },
+  {
+    id: 5,
     name: "Pop & Chill",
     description:
       "Pop and Chill is a dynamic movie website featuring a captivating landing page with background videos showcasing new movies. Users can watch trailers of any movie they click on.",
@@ -280,6 +282,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/Pop-Chill",
   },
   {
+    id: 6,
     name: "Mathwizz",
     description:
       "A basic arithmetic quiz game with randomly generated expressions. Players solve within a time limit, earning points for correct answers and losing tries for incorrect ones. High score is tracked.",
@@ -301,6 +304,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/MathWiz",
   },
   {
+    id: 7,
     name: "Shoping Cart",
     description:
       "An minimal ecommerce project featuring a shopping cart and checkout section for seamless online shopping experience.",
@@ -322,6 +326,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
+    id: 8,
     name: "Vivid Realty",
     description:
       "A Real estate Websites that shows the houses avalabla and price",

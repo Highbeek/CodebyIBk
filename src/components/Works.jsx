@@ -69,6 +69,10 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const handleClick = () => {
+    window.open("https://github.com/Highbeek", "_blank");
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -81,18 +85,31 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
+          Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          links to code repositories and live demos. It reflects my ability to
+          solve complex problems, work with different technologies, and manage
+          projects effectively.
         </motion.p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            {...project}
+            className="hidden sm:block"
+          />
         ))}
+      </div>
+      <div className="mt-10 flex justify-center">
+        <button
+          onClick={handleClick}
+          className="bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-300"
+        >
+          View More
+        </button>
       </div>
     </>
   );
