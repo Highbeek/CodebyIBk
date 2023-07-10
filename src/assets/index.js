@@ -41,6 +41,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import doc from "./doc.png"
+import payday from "./payday.png"
 
 export {
   logo,
@@ -83,4 +84,5 @@ export {
   cart,
   firebase,
   doc,
+  payday
 };

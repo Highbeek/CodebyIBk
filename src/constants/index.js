@@ -35,6 +35,7 @@ import {
   threejs,
   cart,
   doc,
+  payday,
 } from "../assets";
 
 export const navLinks = [
@@ -173,6 +174,28 @@ const testimonials = [
 const projects = [
   {
     id: 1,
+    name: "Payday Clone",
+    description:
+      "The Payday App Clone showcases my expertise in developing functional and user-friendly mobile applications. Designed as a replica of the original Payday App, it offers users a seamless experience in managing their finances ",
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react-navigation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: payday,
+    source_code_link: "https://github.com/Highbeek/Payday-clone",
+  },
+  {
+    id: 2,
     name: "Doc Appointment",
     description:
       "The Doctors Appointment App aims to simplify the process of scheduling appointments with doctors. It provides a comprehensive platform where users can search for doctors based on their specialties, view their profiles and availability, and book appointments at their preferred time slots. ",
@@ -194,7 +217,7 @@ const projects = [
     source_code_link: "https://tinyurl.com/47dn8jnd",
   },
   {
-    id: 2,
+    id: 3,
     name: "Dashboard",
     description:
       "An admin Dashboard that is aimed to allow user register and upload an excel/csv file , with a certain template, which gets analysed and user is able to view visualization of data.(In-view)",
@@ -216,7 +239,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/React-DashBoard",
   },
   {
-    id: 3,
+    id: 4,
     name: "Sapa",
     description:
       "The website showcases 'saPA' a fundraising app focused on spreading happiness and fostering mutual support. It provides easy access to search, explore, learn about the platform, and sign in for users interested in contributing and discovering more.",
@@ -238,7 +261,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/Sapa-App",
   },
   {
-    id: 4,
+    id: 5,
     name: "Linkedin Clone",
     description:
       "A LinkedIn clone offering user registration, login, and profile functionality, allowing users to post messages, view others' posts, and log out with a click on their profile image.",
@@ -260,7 +283,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
   },
   {
-    id: 5,
+    id: 6,
     name: "Pop & Chill",
     description:
       "Pop and Chill is a dynamic movie website featuring a captivating landing page with background videos showcasing new movies. Users can watch trailers of any movie they click on.",
@@ -282,7 +305,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/Pop-Chill",
   },
   {
-    id: 6,
+    id: 7,
     name: "Mathwizz",
     description:
       "A basic arithmetic quiz game with randomly generated expressions. Players solve within a time limit, earning points for correct answers and losing tries for incorrect ones. High score is tracked.",
@@ -304,7 +327,7 @@ const projects = [
     source_code_link: "https://github.com/Highbeek/MathWiz",
   },
   {
-    id: 7,
+    id: 8,
     name: "Shoping Cart",
     description:
       "An minimal ecommerce project featuring a shopping cart and checkout section for seamless online shopping experience.",
@@ -326,7 +349,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    id: 8,
+    id: 9,
     name: "Vivid Realty",
     description:
       "A Real estate Websites that shows the houses avalabla and price",
