@@ -10,6 +10,10 @@ import bootstrap from "../assets/tech/bootstrap.png";
 import firebase from "../assets/tech/firebase.png";
 import expo from "../assets/tech/expo.png";
 import next from "../assets/tech/next.png";
+import chain from "../assets/chain.png";
+import linkedinlogo from "../assets/linkedinlogo.png";
+import resume from "../assets/resume.png";
+import twitter from "../assets/twitter.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -40,8 +44,8 @@ import vivid from "../assets/vivid.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import doc from "./doc.png"
-import payday from "./payday.png"
+import doc from "./doc.png";
+import payday from "./payday.png";
 
 export {
   logo,
@@ -84,5 +88,9 @@ export {
   cart,
   firebase,
   doc,
-  payday
+  payday,
+  chain,
+  twitter,
+  resume,
+  linkedinlogo,
 };

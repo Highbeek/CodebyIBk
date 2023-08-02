@@ -193,6 +193,7 @@ const projects = [
     ],
     image: payday,
     source_code_link: "https://github.com/Highbeek/Payday-clone",
+    livepage_link: "https://youtu.be/8ivbYXFlgUU",
   },
   {
     id: 2,
@@ -215,6 +216,7 @@ const projects = [
     ],
     image: doc,
     source_code_link: "https://tinyurl.com/47dn8jnd",
+    livepage_link: "",
   },
   {
     id: 3,
@@ -237,6 +239,7 @@ const projects = [
     ],
     image: dashboard,
     source_code_link: "https://github.com/Highbeek/React-DashBoard",
+    livepage_link: "https://ibdashboard.netlify.app",
   },
   {
     id: 4,
@@ -259,6 +262,7 @@ const projects = [
     ],
     image: sapa,
     source_code_link: "https://github.com/Highbeek/Sapa-App",
+    livepage_link: "",
   },
   {
     id: 5,
@@ -281,6 +285,7 @@ const projects = [
     ],
     image: linkedin,
     source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
+    livepage_link: "",
   },
   {
     id: 6,
@@ -303,6 +308,7 @@ const projects = [
     ],
     image: pop,
     source_code_link: "https://github.com/Highbeek/Pop-Chill",
+    livepage_link: "https://popchill.netlify.app/",
   },
   {
     id: 7,
@@ -325,6 +331,7 @@ const projects = [
     ],
     image: maths,
     source_code_link: "https://github.com/Highbeek/MathWiz",
+    livepage_link: "https://mathwizz.netlify.app",
   },
   {
     id: 8,
@@ -347,6 +354,7 @@ const projects = [
     ],
     image: cart,
     source_code_link: "https://github.com/",
+    livepage_link: "",
   },
   {
     id: 9,
@@ -369,7 +377,24 @@ const projects = [
     ],
     image: vivid,
     source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
+    livepage_link: "https://vividrealty.netlify.app",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const links = [
+  {
+    platform: "linkedin",
+    url: "https://www.linkedin.com/in/ibukunagboola",
+  },
+  {
+    platform: "twitter",
+    url: "https://twitter.com/highbk",
+  },
+  {
+    platform: "resume",
+    url: "https://drive.google.com/file/d/1JRaSw4WZq6rehaCWfOGrjZ52ZPAe5Smo/view?usp=sharing",
+  },
+];
+
+
+export { services, technologies, experiences, testimonials, projects,links  };

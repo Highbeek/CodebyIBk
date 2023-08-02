@@ -1,11 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import ResumeIcon from "./ResumeIcon";
+import TwitterIcon from "./Twitter";
+import LinkedInIcon from "./LinkedInIcon";
+import { links } from "../constants";
+import { slideIn } from "../utils/motion";
 
 const Hero = () => {
+  const handleClick = (url) => {
+    console.log("Clicked link:", url);
+    window.open(url, "_blank");
+  };
+
   return (
-    <section className="relative w-full h-screen max-auto">
+    <section className="relative w-full h-screen max-auto overflow-hidden">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -25,9 +34,43 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
 
-      <div className="absolute  xs:bottom-0 bottom-32 w-full flex justify-center items-center mt-32">
+      <div className="flex flex-row z-10 top-[65%] absolute justify-around items-center w-full ">
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          animate="hidden"
+        >
+          <LinkedInIcon
+            link={links.find((item) => item.platform === "linkedin").url}
+            handleClick={() =>
+              handleClick(
+                links.find((item) => item.platform === "linkedin").url
+              )
+            }
+          />
+        </motion.div>
+
+        <ResumeIcon
+          link={links.find((item) => item.platform === "resume").url}
+          handleClick={() =>
+            handleClick(links.find((item) => item.platform === "resume").url)
+          }
+        />
+
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          animate="hidden"
+        >
+          <TwitterIcon
+            link={links.find((item) => item.platform === "twitter").url}
+            handleClick={() =>
+              handleClick(links.find((item) => item.platform === "twitter").url)
+            }
+          />
+        </motion.div>
+      </div>
+
+      <div className="absolute xs:bottom-0 bottom-32 w-full flex justify-center items-center ">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
