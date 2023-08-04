@@ -15,10 +15,17 @@ const YouTubePlayer = ({ videoUrl, onClose }) => {
       modestbranding: 1,
       controls: 1,
       showinfo: 0,
+      rel: 0, // Disable related videos
+      iv_load_policy: 3, // Disable video annotations
     },
   };
 
   const onReady = (event) => {
+    event.target.playVideo();
+  };
+
+  const onEnd = (event) => {
+    // Replay the video when it ends (looping behavior)
     event.target.playVideo();
   };
 
@@ -40,6 +47,7 @@ const YouTubePlayer = ({ videoUrl, onClose }) => {
                 videoId={videoUrl.split("/").pop()}
                 opts={opts}
                 onReady={onReady}
+                onEnd={onEnd} // Call the onEnd handler
               />
               {/* Overlay div to hide YouTube logo and profile picture */}
               <div

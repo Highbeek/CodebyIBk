@@ -154,7 +154,6 @@ const experiences = [
       "Developed operational reporting in Excel and Power BI to increase revenue and identify areas for improvement.",
       "Increased revenue by over 20% through data analysis of market behaviors, vendor relationships, and workflows.",
       "Utilized Tableau and Power BI to analyze financial reporting, resulting in cost savings.",
-      "Streamlined payment and expenditure monitoring, reducing errors by 23% through organized files",
     ],
   },
 ];
@@ -176,7 +175,7 @@ const projects = [
     id: 1,
     name: "Payday Clone",
     description:
-      "The Payday App Clone showcases my expertise in developing functional and user-friendly mobile applications. Designed as a replica of the original Payday App, it offers users a seamless experience in managing their finances ",
+      "My Payday App Clone showcases my expertise in creating user-friendly finance management mobile apps.",
     tags: [
       {
         name: "react-native",
@@ -199,7 +198,7 @@ const projects = [
     id: 2,
     name: "Doc Appointment",
     description:
-      "The Doctors Appointment App aims to simplify the process of scheduling appointments with doctors. It provides a comprehensive platform where users can search for doctors based on their specialties, view their profiles and availability, and book appointments at their preferred time slots. ",
+      "The Doctors Appointment App simplifies scheduling appointments with doctors. Users can search for specialists, view profiles, check availability, and book appointments easily. ",
     tags: [
       {
         name: "react-native",
@@ -245,7 +244,7 @@ const projects = [
     id: 4,
     name: "Sapa",
     description:
-      "The website showcases 'saPA' a fundraising app focused on spreading happiness and fostering mutual support. It provides easy access to search, explore, learn about the platform, and sign in for users interested in contributing and discovering more.",
+      "saPA is  a fundraising app for spreading happiness and fostering mutual support, enabling users to explore, learn, and sign in to contribute and discover more.",
     tags: [
       {
         name: "react",
@@ -262,7 +261,7 @@ const projects = [
     ],
     image: sapa,
     source_code_link: "https://github.com/Highbeek/Sapa-App",
-    livepage_link: "",
+    livepage_link: "https://endsapa.netlify.app/",
   },
   {
     id: 5,
@@ -291,18 +290,18 @@ const projects = [
     id: 6,
     name: "Pop & Chill",
     description:
-      "Pop and Chill is a dynamic movie website featuring a captivating landing page with background videos showcasing new movies. Users can watch trailers of any movie they click on.",
+      "Pop and Chill: A dynamic movie website with captivating landing page and background videos showcasing new movies. Users can watch trailers of any clicked movie.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "react",
+        name: "react-hooks",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "api",
         color: "pink-text-gradient",
       },
     ],
@@ -396,5 +395,4 @@ const links = [
   },
 ];
 
-
-export { services, technologies, experiences, testimonials, projects,links  };
+export { services, technologies, experiences, testimonials, projects, links };
