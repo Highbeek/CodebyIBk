@@ -215,7 +215,7 @@ const projects = [
     ],
     image: doc,
     source_code_link: "https://tinyurl.com/47dn8jnd",
-    livepage_link: "",
+    livepage_link: "https://youtube.com/shorts/Di384hVqz8Q",
   },
   {
     id: 3,

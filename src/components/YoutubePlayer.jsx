@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import YouTube from "react-youtube";
 import { motion, AnimatePresence } from "framer-motion";
 
 const YouTubePlayer = ({ videoUrl, onClose }) => {
-  const [showYouTubeVideo, setShowYouTubeVideo] = React.useState(true);
+  const [showYouTubeVideo, setShowYouTubeVideo] = useState(true);
 
   const handleClose = () => {
     setShowYouTubeVideo(false);
@@ -15,8 +15,8 @@ const YouTubePlayer = ({ videoUrl, onClose }) => {
       modestbranding: 1,
       controls: 1,
       showinfo: 0,
-      rel: 0, // Disable related videos
-      iv_load_policy: 3, // Disable video annotations
+      rel: 0, 
+      iv_load_policy: 3, 
     },
   };
 
@@ -25,7 +25,6 @@ const YouTubePlayer = ({ videoUrl, onClose }) => {
   };
 
   const onEnd = (event) => {
-    // Replay the video when it ends (looping behavior)
     event.target.playVideo();
   };
 
@@ -40,16 +39,16 @@ const YouTubePlayer = ({ videoUrl, onClose }) => {
           className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-black bg-opacity-50"
           onClick={handleClose}
         >
-          {/* Adjust the content container */}
+          
           <div className="relative w-[80%] h-[80%] max-w-[1280px] max-h-[720px] m-4">
             <div className="aspect-w-16 aspect-h-9 w-full h-full relative">
               <YouTube
                 videoId={videoUrl.split("/").pop()}
                 opts={opts}
                 onReady={onReady}
-                onEnd={onEnd} // Call the onEnd handler
+                onEnd={onEnd} 
               />
-              {/* Overlay div to hide YouTube logo and profile picture */}
+             
               <div
                 className="h-[800px]"
                 style={{

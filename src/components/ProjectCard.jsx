@@ -5,9 +5,8 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { chain } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import YouTubePlayer from "./Youtubeplayer";
+import YouTubePlayer from "./YoutubePlayer";
 
 const ProjectCard = ({
   index,
@@ -17,7 +16,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   livepage_link,
-  onVideoClick, 
+  onVideoClick,
 }) => {
   const [showYouTubeVideo, setShowYouTubeVideo] = useState(false);
 
@@ -26,10 +25,10 @@ const ProjectCard = ({
   };
 
   const handleLinkClick = () => {
-    const isYouTubeLink = livepage_link.includes("youtu.be/");
+    const isYouTubeLink = livepage_link.includes("youtu");
 
     if (isYouTubeLink) {
-      onVideoClick(livepage_link); 
+      onVideoClick(livepage_link);
     } else {
       window.open(livepage_link);
     }
@@ -93,4 +92,4 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;
+export default SectionWrapper(ProjectCard, "projectCard");

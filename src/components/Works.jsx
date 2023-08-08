@@ -1,14 +1,12 @@
 // Works.js
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresence
+import { motion, AnimatePresence } from "framer-motion"; 
 import { styles } from "../styles";
-import { github } from "../assets";
-import { chain } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import ProjectCard from "./ProjectCard";
-import YouTubePlayer from "./Youtubeplayer";
+import YouTubePlayer from "./YoutubePlayer";
 
 const Works = () => {
   const [showYouTubeVideo, setShowYouTubeVideo] = useState(false);
