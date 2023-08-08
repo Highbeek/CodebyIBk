@@ -92,4 +92,4 @@ const ProjectCard = ({
   );
 };
 
-export default SectionWrapper(ProjectCard, "projectCard");
+export default ProjectCard;
