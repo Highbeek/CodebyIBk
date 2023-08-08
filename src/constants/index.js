@@ -284,7 +284,7 @@ const projects = [
     ],
     image: linkedin,
     source_code_link: "https://github.com/Highbeek/LinkedIn-Clone",
-    livepage_link: "",
+    livepage_link: "https://ibdevlinkedinclone.netlify.app",
   },
   {
     id: 6,
