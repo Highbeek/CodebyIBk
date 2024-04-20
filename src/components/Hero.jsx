@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
 import { styles } from "../styles";
-import ResumeIcon from "./ResumeIcon";
-import TwitterIcon from "./Twitter";
-import LinkedInIcon from "./LinkedInIcon";
-import { links } from "../constants";
-import { slideIn } from "../utils/motion";
+import { ProjectCarousel } from ".";
+import { projects } from "../constants";
+import { chain } from "../assets";
+import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
-  const handleClick = (url) => {
+  const handRef = useRef(null);
+
+  useGSAP(() => {
+    const hand = handRef.current;
+
+    gsap.fromTo(
+      hand,
+      { y: 0 },
+      {
+        y: -20,
+        duration: 0.5,
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+      }
+    );
+
+    return () => {
+      gsap.killTweensOf(hand);
+    };
+  }, []);
+
+  const handleLinkClick = (url) => {
     console.log("Clicked link:", url);
     window.open(url, "_blank");
   };
@@ -32,44 +54,24 @@ const Hero = () => {
             detail, I bring designs to life, creating captivating digital
             solutions.
           </p>
+          <div
+            className="cursor-pointer flex items-center gap-4 py-4"
+            onClick={() => handleLinkClick("https://linktr.ee/ibukunagboola")}
+          >
+            <p>Click the icon to connect on social media 👉</p>
+            <img
+              src={chain}
+              alt="source code"
+              className="w-10 h-10 object-contain"
+              ref={handRef}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-row z-10 top-[65%] absolute justify-around items-center w-full ">
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
-          animate="hidden"
-        >
-          <LinkedInIcon
-            link={links.find((item) => item.platform === "linkedin").url}
-            handleClick={() =>
-              handleClick(
-                links.find((item) => item.platform === "linkedin").url
-              )
-            }
-          />
-        </motion.div>
-
-        <ResumeIcon
-          link={links.find((item) => item.platform === "resume").url}
-          handleClick={() =>
-            handleClick(links.find((item) => item.platform === "resume").url)
-          }
-        />
-
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          animate="hidden"
-        >
-          <TwitterIcon
-            link={links.find((item) => item.platform === "twitter").url}
-            handleClick={() =>
-              handleClick(links.find((item) => item.platform === "twitter").url)
-            }
-          />
-        </motion.div>
+      <div className="flex flex-row z-10 top-[55%] absolute justify-around items-center ">
+        <ProjectCarousel projects={projects} />
       </div>
-
       <div className="absolute xs:bottom-0 bottom-32 w-full flex justify-center items-center ">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">

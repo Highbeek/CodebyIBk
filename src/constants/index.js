@@ -36,6 +36,10 @@ import {
   cart,
   doc,
   payday,
+  squareme,
+  squaremeBg,
+  umra,
+  umraPage,
 } from "../assets";
 
 export const navLinks = [
@@ -59,15 +63,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
-    title: "Data Analyst",
+    title: "Web Developer",
     icon: backend,
   },
   {
-    title: "Web Developer",
+    title: "Data Analyst",
     icon: creator,
   },
 ];
@@ -129,11 +133,39 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Mobile Developer",
+    company_name: "Squareme-Social Payment Platform",
+    icon: squareme,
+    iconBg: "#383E56",
+    date: "August 2023 - Present",
+    points: [
+      "Contributed significantly to the development of Squareme, a social payment platform enabling users to send, request, and receive payments using phone numbers.",
+      "Collaborated with backend engineers to integrate real-time payment processing using secure APIs.",
+      "Implemented OAuth for secure user authentication, ensuring a safe and trustworthy transaction environment.",
+      "Utilized React Native for cross-platform compatibility, resulting in a streamlined development process.",
+      "Actively participated in bi-weekly sprint reviews, incorporating user feedback and continuous improvements.",
+      "Achieved a 4.5-star rating on both the App Store and Google Play within the first three months of release.",
+      "Played a key role in resolving critical bugs and implementing feature enhancements, contributing to a 20% month-over-month increase in active users.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "De-Benedict  Initiative NGO",
+    icon: "",
+    iconBg: "#383E56",
+    date: "April 2022 - August 2023",
+    points: [
+      "Developed and improved web pages, ensuring the website's design and functionality aligned with best practices in web development.",
+      "Collaborated closely with designers and developers, utilizing Git/GitHub for efficient version control and seamless team collaboration.",
+      "Developed and maintained web applications, utilizing React.js ",
+    ],
+  },
+  {
     title: "React.js Developer",
     company_name: "Gomycode",
     icon: "",
     iconBg: "#383E56",
-    date: "April 2022 - Present",
+    date: "April 2022 - August 2023",
     points: [
       "Volunteered as part of an open-source contribution, collaborating with a team of developers to create and maintain web applications.",
       "Contributed to open-source projects as part of a development team, focusing on web applications and mobile apps.",
@@ -172,7 +204,50 @@ const testimonials = [
 
 const projects = [
   {
-    id: 1,
+    name: "UMRA | Landing page",
+    description:
+      "A PERSONAL HEALTH COMPANION to Monitor  blood pressure and sugar levels, receive personalized insights, and connect with healthcare professionals.",
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react-navigation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: umraPage,
+    source_code_link: "/",
+    livepage_link: "https://umra-landing-page.vercel.app/",
+  },
+  {
+    name: "Squareme App | P2P Payment App",
+    description:
+      "Simplify money transfers between friends with ease and security.\nAvailable on app store and google store",
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react-navigation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: squaremeBg,
+    source_code_link: "https://squareme.app/",
+    livepage_link: "https://youtu.be/8ivbYXFlgUU",
+  },
+  {
     name: "Payday Clone",
     description:
       "My Payday App Clone showcases my expertise in creating user-friendly finance management mobile apps.",
@@ -195,7 +270,6 @@ const projects = [
     livepage_link: "https://youtu.be/8ivbYXFlgUU",
   },
   {
-    id: 2,
     name: "Doc Appointment",
     description:
       "The Doctors Appointment App simplifies scheduling appointments with doctors. Users can search for specialists, view profiles, check availability, and book appointments easily. ",
@@ -218,7 +292,6 @@ const projects = [
     livepage_link: "https://youtube.com/shorts/Di384hVqz8Q",
   },
   {
-    id: 3,
     name: "Dashboard",
     description:
       "An admin Dashboard that is aimed to allow user register and upload an excel/csv file , with a certain template, which gets analysed and user is able to view visualization of data.(In-view)",
@@ -241,7 +314,6 @@ const projects = [
     livepage_link: "https://ibdashboard.netlify.app",
   },
   {
-    id: 4,
     name: "Sapa",
     description:
       "saPA is  a fundraising app for spreading happiness and fostering mutual support, enabling users to explore, learn, and sign in to contribute and discover more.",
@@ -264,7 +336,6 @@ const projects = [
     livepage_link: "https://endsapa.netlify.app/",
   },
   {
-    id: 5,
     name: "Linkedin Clone",
     description:
       "A LinkedIn clone offering user registration, login, and profile functionality, allowing users to post messages, view others' posts, and log out with a click on their profile image.",
@@ -287,7 +358,6 @@ const projects = [
     livepage_link: "https://ibdevlinkedinclone.netlify.app",
   },
   {
-    id: 6,
     name: "Pop & Chill",
     description:
       "Pop and Chill: A dynamic movie website with captivating landing page and background videos showcasing new movies. Users can watch trailers of any clicked movie.",
@@ -310,7 +380,6 @@ const projects = [
     livepage_link: "https://popchill.netlify.app/",
   },
   {
-    id: 7,
     name: "Mathwizz",
     description:
       "A basic arithmetic quiz game with randomly generated expressions. Players solve within a time limit, earning points for correct answers and losing tries for incorrect ones. High score is tracked.",
@@ -333,7 +402,6 @@ const projects = [
     livepage_link: "https://mathwizz.netlify.app",
   },
   {
-    id: 8,
     name: "Shoping Cart",
     description:
       "An minimal ecommerce project featuring a shopping cart and checkout section for seamless online shopping experience.",
@@ -356,7 +424,6 @@ const projects = [
     livepage_link: "",
   },
   {
-    id: 9,
     name: "Vivid Realty",
     description:
       "A Real estate Websites that shows the houses avalabla and price",

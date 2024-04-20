@@ -46,6 +46,10 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import doc from "./doc.png";
 import payday from "./payday.png";
+import squareme from "./company/squareme.png";
+import squaremeBg from "./squaremebg.png";
+import umra from "./company/umra.png";
+import umraPage from "./umrapage.png";
 
 export {
   logo,
@@ -93,4 +97,8 @@ export {
   twitter,
   resume,
   linkedinlogo,
+  squareme,
+  squaremeBg,
+  umra,
+  umraPage,
 };

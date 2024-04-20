@@ -14,7 +14,6 @@ import {
   Footer,
 } from "./components";
 
-
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,15 +23,15 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Experience/>
-        <Tech/>
-        <Works/>
-        <Feedbacks/>
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
         <div className="relative z-0">
-          <Contact/>
-          <StarsCanvas/>
+          <Contact />
+          <StarsCanvas />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </BrowserRouter>
   );

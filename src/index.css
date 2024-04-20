@@ -114,6 +114,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* .carousel {
+  animation: slideAnimation 20s linear infinite;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
@@ -202,9 +215,3 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
-
-
-
-
-
-
