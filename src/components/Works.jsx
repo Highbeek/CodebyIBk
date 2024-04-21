@@ -26,13 +26,15 @@ const Works = () => {
   };
 
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+    <div id="works">
+      <div>
+        <p className={`${styles.sectionSubText} `} data-aos="fade-up">
+          My work
+        </p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
         <div className="w-full flex">
-          <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
+          <p
+            // variants={fadeIn("", "", 0.1, 1)}
             className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
             Following projects showcase my skills and experience through
@@ -40,10 +42,10 @@ const Works = () => {
             with links to code repositories and live demos. It reflects my
             ability to solve complex problems, work with different technologies,
             and manage projects effectively.
-          </motion.p>
+          </p>
         </div>
-      </motion.div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-20 relative">
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-20 relative max-w-full">
         {projects.map((project, index) => (
           <ProjectCard
             key={`project-${index}`}
@@ -53,7 +55,6 @@ const Works = () => {
           />
         ))}
       </div>
-
       <AnimatePresence>
         {showYouTubeVideo && (
           <motion.div
@@ -61,7 +62,7 @@ const Works = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            className="fixed top-1/2 left-1/2 flex justify-center items-center z-50 bg-black bg-opacity-50 "
+            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-black bg-opacity-50"
           >
             <YouTubePlayer
               videoUrl={selectedVideoUrl}
@@ -79,8 +80,8 @@ const Works = () => {
           View More
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "works");

@@ -1,12 +1,10 @@
-// ProjectCard.js
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { styles } from "../styles";
+import React, { useState, useRef, useEffect } from "react";
 import { github } from "../assets";
 import { chain } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import YouTubePlayer from "./YoutubePlayer";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const ProjectCard = ({
   index,
@@ -19,6 +17,26 @@ const ProjectCard = ({
   onVideoClick,
 }) => {
   const [showYouTubeVideo, setShowYouTubeVideo] = useState(false);
+  const cardRef = useRef(null);
+
+  useGSAP(() => {
+    const card = cardRef.current;
+
+    gsap.fromTo(
+      card,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.75,
+        delay: index * 0.5,
+        ease: "power3.out",
+      }
+    );
+  }, [index]);
 
   const handleClick = () => {
     window.open(source_code_link, "_blank");
@@ -35,50 +53,53 @@ const ProjectCard = ({
   };
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative">
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
+    <div
+      ref={cardRef}
+      className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] relative"
+    >
+      <div className="relative w-full h-[230px]">
+        <img
+          src={image}
+          alt="project_image"
+          className="w-full h-full object-cover rounded-2xl"
+        />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={handleClick}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-          <div className="cursor-pointer" onClick={handleLinkClick}>
+        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div
+            onClick={handleClick}
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+          >
             <img
-              src={chain}
+              src={github}
               alt="source code"
-              className="w-5 h-5 object-contain"
+              className="w-1/2 h-1/2 object-contain"
             />
           </div>
+        </div>
+      </div>
+
+      <div className="mt-5">
+        <h3 className="text-white font-bold text-lg sm:text-xl">{name}</h3>
+        <p className="mt-2 text-secondary text-sm sm:text-base">
+          {description}
+        </p>
+      </div>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <p
+            key={`${name}-${tag.name}`}
+            className={`text-sm sm:text-base ${tag.color}`}
+          >
+            #{tag.name}
+          </p>
+        ))}
+        <div className="cursor-pointer" onClick={handleLinkClick}>
+          <img
+            src={chain}
+            alt="source code"
+            className="w-5 h-5 object-contain"
+          />
         </div>
       </div>
 
@@ -88,7 +109,7 @@ const ProjectCard = ({
           onClose={() => setShowYouTubeVideo(false)}
         />
       )}
-    </motion.div>
+    </div>
   );
 };
 
