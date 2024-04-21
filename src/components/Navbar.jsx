@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-t fixed top-0 z-20 bg-primary`}
@@ -18,6 +22,7 @@ const Navbar = () => {
             setActive("");
             window.scrollTo(0, 0);
           }}
+          data-aos="slide-right"
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
 
@@ -26,7 +31,10 @@ const Navbar = () => {
             <span className="sm:block hidden ">| Agboola</span>{" "}
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul
+          className="list-none hidden sm:flex flex-row gap-10 nav-links"
+          data-aos="slide-left"
+        >
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -52,7 +60,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-none flex justify-end flex-col gap-4">
+            <ul className="list-none flex justify-end flex-col gap-4 nav-links">
               {navLinks.map((link) => (
                 <li
                   key={link.id}

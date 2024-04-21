@@ -34,13 +34,14 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} data-aos="fade-up">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl  leading-[30px]"
+        data-aos="fade-down"
       >
         As a front-end developer, I specialize in leveraging React, React
         Native, and other modern technologies to create exceptional user

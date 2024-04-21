@@ -1,6 +1,6 @@
 // Works.js
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; 
+import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
@@ -13,7 +13,7 @@ const Works = () => {
   const [selectedVideoUrl, setSelectedVideoUrl] = useState("");
 
   const handleClick = () => {
-    window.open("https://github.com/Highbeek", "_blank");
+    window.open("https://github.com/Highbeek?tab=repositories", "_blank");
   };
 
   const handleVideoClick = (videoUrl) => {

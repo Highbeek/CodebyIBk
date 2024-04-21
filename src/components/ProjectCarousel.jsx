@@ -1,56 +1,64 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const ProjectCarousel = ({ projects }) => {
   const carouselRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const carousel = carouselRef.current;
     const totalWidth = projects.length * 350;
 
-    // Animation for continuous scrolling
     const tl = gsap.timeline({ repeat: -1 });
     tl.to(carousel, {
       x: -totalWidth,
-      duration: 35,
+      duration: 30,
       ease: "linear",
+      onComplete: () => {
+        gsap.set(carousel, { x: 0 });
+      },
     });
+    const scaleProject = () => {
+      const projectElements = carousel.querySelectorAll(".project");
 
-    const scaleImage = () => {
-      const imageElements = carousel.querySelectorAll(".project img");
-
-      imageElements.forEach((imageElement) => {
-        const rect = imageElement.getBoundingClientRect();
+      projectElements.forEach((projectElement, index) => {
+        const rect = projectElement.getBoundingClientRect();
         const isVisible =
           rect.left < window.innerWidth / 2 &&
           rect.right > window.innerWidth / 2;
 
+        const zIndex = isVisible ? 1 : 0;
+
+        gsap.to(projectElement, {
+          zIndex,
+        });
+
         if (isVisible) {
-          gsap.to(imageElement, {
+          gsap.to(projectElement, {
             scale: 1.2,
-            duration: 0.5,
+            duration: 1,
             ease: "power2.inOut",
             onComplete: () => {
               setTimeout(() => {
-                gsap.to(imageElement, {
+                gsap.to(projectElement, {
                   scale: 1,
-                  duration: 0.5,
+                  duration: 1.5,
                   ease: "power2.inOut",
                 });
               }, 2000);
             },
           });
         } else {
-          gsap.to(imageElement, {
+          gsap.to(projectElement, {
             scale: 1,
-            duration: 0.5,
+            duration: 1,
             ease: "power2.inOut",
           });
         }
       });
     };
 
-    tl.eventCallback("onUpdate", scaleImage);
+    tl.eventCallback("onUpdate", scaleProject);
 
     return () => {
       tl.kill();
@@ -66,16 +74,19 @@ const ProjectCarousel = ({ projects }) => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`project rounded-lg p-3 m-3 border-8 border-cyan-950 lg:w-1/4 overflow-hidden violet-gradient shadow-card`}
+          id={project.name.replace(/\s+/g, "-").toLowerCase()}
+          className={`project rounded-lg p-3 m-3 border-8 border-cyan-950 lg:w-1/4 overflow-hidden violet-gradient shadow-card cursor-pointer`}
           style={{ minWidth: "350px" }}
         >
-          <img
-            src={project.image}
-            alt={project.name}
-            className="w-full h-auto object-cover rounded-lg"
-            style={{ minWidth: "350px" }}
-          />
-          <h3 className="text-white text-center">{project.name}</h3>
+          <a href={`#${project.name.replace(/\s+/g, "-").toLowerCase()}`}>
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full h-auto object-cover rounded-lg"
+              style={{ minWidth: "350px" }}
+            />
+            <h3 className="text-white text-center mt-6">{project.name}</h3>{" "}
+          </a>
         </div>
       ))}
     </div>
