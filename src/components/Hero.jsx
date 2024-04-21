@@ -116,7 +116,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="z-10 top-[55%] absolute w-full justify-center items-center"
+        className="z-10 top-[55%] absolute w-full justify-center items-center lg:block hidden"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, delay: 2, ease: "easeInOut" }}
