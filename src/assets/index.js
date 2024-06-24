@@ -50,6 +50,8 @@ import squareme from "./company/squareme.png";
 import squaremeBg from "./squaremebg.png";
 import umra from "./company/umra.png";
 import umraPage from "./umrapage.png";
+import umraDash from "./umra.png";
+import spoutBg from "./spoutbg.png";
 
 export {
   logo,
@@ -101,4 +103,6 @@ export {
   squaremeBg,
   umra,
   umraPage,
+  umraDash,
+  spoutBg,
 };

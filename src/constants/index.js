@@ -40,6 +40,8 @@ import {
   squaremeBg,
   umra,
   umraPage,
+  umraDash,
+  spoutBg,
 } from "../assets";
 
 export const navLinks = [
@@ -204,12 +206,34 @@ const testimonials = [
 
 const projects = [
   {
-    name: "UMRA | Landing page",
-    description:
-      "A PERSONAL HEALTH COMPANION to Monitor  blood pressure and sugar levels, receive personalized insights, and connect with healthcare professionals.",
+    name: "SPOUTPAY | Making payments for you throughout Africa",
+    description: "A Finance App for Making payments  throughout Africa",
     tags: [
       {
         name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "android",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react-native,navigation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spoutBg,
+    source_code_link: "/",
+    livepage_link:
+      "https://play.google.com/store/search?q=spoutpay&c=apps&hl=en_US",
+  },
+  {
+    name: "UMRA | Doctor's Dashboard",
+    description:
+      "A PERSONAL HEALTH COMPANION dashboard for Doctors  to manage their patients",
+    tags: [
+      {
+        name: "react,nextjs",
         color: "blue-text-gradient",
       },
       {
@@ -217,7 +241,29 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "react-navigation",
+        name: "taiwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: umraDash,
+    source_code_link: "/",
+    livepage_link: "https://umra-doctors-app.vercel.app/dashboard",
+  },
+  {
+    name: "UMRA | Landing page",
+    description:
+      "A PERSONAL HEALTH COMPANION to Monitor  blood pressure and sugar levels, receive personalized insights, and connect with healthcare professionals.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
@@ -235,7 +281,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "react",
+        name: "ios,android",
         color: "green-text-gradient",
       },
       {
