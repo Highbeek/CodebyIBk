@@ -42,6 +42,7 @@ import {
   umraPage,
   umraDash,
   spoutBg,
+  gift,
 } from "../assets";
 
 export const navLinks = [
@@ -205,6 +206,27 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Gift - Awoh",
+    description: "This is a portfolio project for Product Designer",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "gsap || framer",
+        color: "green-text-gradient",
+      },
+      {
+        name: "responsiveness",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: gift,
+    source_code_link: "/",
+    livepage_link: "https://www.giftawoh.com/",
+  },
   {
     name: "SPOUTPAY | Making payments for you throughout Africa",
     description: "A Finance App for Making payments  throughout Africa",

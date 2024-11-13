@@ -6,6 +6,7 @@ import { ProjectCarousel } from ".";
 import { projects } from "../constants";
 import { chain } from "../assets";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Hero = () => {
   const handRef = useRef(null);
@@ -69,6 +70,18 @@ const Hero = () => {
       }
     );
 
+    const createMarqueeAnimation = (element, direction = "left") => {
+      const distance = direction === "left" ? "-100%" : "100%";
+      gsap.to(element, {
+        x: distance,
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+      });
+    };
+
+    createMarqueeAnimation(carouselRef.current, "right");
+
     return () => {
       gsap.killTweensOf(hand);
       gsap.killTweensOf(text.children);
@@ -115,14 +128,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <motion.div
+      <div
         className="z-10 top-[55%] absolute w-full justify-center items-center lg:block hidden"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, delay: 2, ease: "easeInOut" }}
+        ref={carouselRef}
       >
         <ProjectCarousel projects={projects} />
-      </motion.div>
+      </div>
 
       <div className="absolute xs:bottom-0 bottom-10 w-full flex justify-center items-center ">
         <a href="#about">

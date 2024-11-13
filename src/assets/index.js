@@ -52,6 +52,7 @@ import umra from "./company/umra.png";
 import umraPage from "./umrapage.png";
 import umraDash from "./umra.png";
 import spoutBg from "./spoutbg.png";
+import gift from "./gifted.png";
 
 export {
   logo,
@@ -104,5 +105,6 @@ export {
   umra,
   umraPage,
   umraDash,
+  gift,
   spoutBg,
 };
