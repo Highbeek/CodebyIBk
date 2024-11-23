@@ -130,9 +130,9 @@ const Hero = () => {
 
       <div
         className="z-10 top-[55%] absolute w-full justify-center items-center lg:block hidden"
-        ref={carouselRef}
+        
       >
-        <ProjectCarousel projects={projects} />
+        <ProjectCarousel projects={projects} ref={carouselRef}/>
       </div>
 
       <div className="absolute xs:bottom-0 bottom-10 w-full flex justify-center items-center ">

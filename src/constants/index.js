@@ -43,6 +43,8 @@ import {
   umraDash,
   spoutBg,
   gift,
+  bibleQ,
+  furex,
 } from "../assets";
 
 export const navLinks = [
@@ -152,6 +154,20 @@ const experiences = [
     ],
   },
   {
+    title: "Mobile Developer",
+    company_name: "Furex Texhnologies-crypto trading platform",
+    icon: furex,
+    iconBg: "#383E56",
+    date: "July 2024 - November 2024",
+    points: [
+      "Optimized app performance and addressed technical issues to ensure a smooth and responsive user experience for crypto transactions",
+      "Implemented scalable code and adhered to best practices for maintainable and efficient software development.",
+      "Conducted comprehensive code reviews and provided actionable feedback to enhance team productivity and code quality",
+      "Actively participated in bi-weekly sprint reviews, incorporating user feedback and continuous improvements.",
+      "Collaborated with product managers, designers, and backend engineers to introduce and refine features like crypto trading, gift card exchanges, and digital asset management",
+    ],
+  },
+  {
     title: "Frontend Developer",
     company_name: "De-Benedict  Initiative NGO",
     icon: "",
@@ -206,6 +222,29 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "BibleQ",
+    description:
+      "A personal project designed to offer engaging and interactive Bible quizzes, promoting learning and exploration of biblical knowledge in a fun way.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "gsap || framer",
+        color: "green-text-gradient",
+      },
+      {
+        name: "responsiveness",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bibleQ,
+    source_code_link: "https://github.com/Highbeek/Bible-Quiz",
+    livepage_link:
+      "https://bible-quiz-4h9tvfszl-highbeeks-projects.vercel.app/",
+  },
   {
     name: "Gift - Awoh",
     description: "This is a portfolio project for Product Designer",

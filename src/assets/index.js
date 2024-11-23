@@ -53,6 +53,8 @@ import umraPage from "./umrapage.png";
 import umraDash from "./umra.png";
 import spoutBg from "./spoutbg.png";
 import gift from "./gifted.png";
+import bibleQ from "./bibleQ.png";
+import furex from "./company/furex.png";
 
 export {
   logo,
@@ -107,4 +109,6 @@ export {
   umraDash,
   gift,
   spoutBg,
+  bibleQ,
+  furex,
 };
