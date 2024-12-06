@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { github } from "../assets";
 import { chain } from "../assets";
-import { fadeIn } from "../utils/motion";
 import YouTubePlayer from "./YoutubePlayer";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProjectCard = ({
   index,
@@ -18,6 +19,7 @@ const ProjectCard = ({
 }) => {
   const [showYouTubeVideo, setShowYouTubeVideo] = useState(false);
   const cardRef = useRef(null);
+  const chainRef = useRef(null);
 
   useGSAP(() => {
     const card = cardRef.current;
@@ -38,8 +40,57 @@ const ProjectCard = ({
     );
   }, [index]);
 
+  const handleMouseEnter = () => {
+    // Scale up the card
+    gsap.to(cardRef.current, {
+      scale: 1.05,
+      duration: 0.3,
+      ease: "power1.out",
+    });
+
+    // Only animate the chain when hovering
+    gsap.to(chainRef.current, {
+      y: "-10px",
+      repeat: -1,
+      yoyo: true,
+      duration: 0.5,
+      ease: "ease.inOut",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    // Scale back to normal
+    gsap.to(cardRef.current, {
+      scale: 1,
+      duration: 0.3,
+      ease: "power1.in",
+    });
+
+    // Stop chain animation and return to original position
+    gsap.to(chainRef.current, {
+      y: "0px",
+      repeat: 0,
+      duration: 0.3,
+    });
+
+    // Immediately kill any ongoing chain animations
+    gsap.killTweensOf(chainRef.current);
+  };
+
   const handleClick = () => {
-    window.open(source_code_link, "_blank");
+    if (!source_code_link || source_code_link === "") {
+      toast.info(
+        "This GitHub link is restricted. Feel free to explore the video or check out the live page instead!",
+        {
+          position: "top-right",
+          autoClose: 5000,
+          theme: "dark",
+          type: "warning",
+        }
+      );
+    } else {
+      window.open(source_code_link, "_blank");
+    }
   };
 
   const handleLinkClick = () => {
@@ -56,6 +107,8 @@ const ProjectCard = ({
     <div
       ref={cardRef}
       className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="relative w-full h-[230px]">
         <img
@@ -94,8 +147,10 @@ const ProjectCard = ({
             #{tag.name}
           </p>
         ))}
+
         <div className="cursor-pointer" onClick={handleLinkClick}>
           <img
+            ref={chainRef}
             src={chain}
             alt="source code"
             className="w-5 h-5 object-contain"

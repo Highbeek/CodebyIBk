@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AOSInit } from "./components/AOS";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   About,
   Contact,
@@ -33,6 +35,7 @@ const App = () => {
           <StarsCanvas />
         </div>
         <Footer />
+        <ToastContainer />
       </div>
     </BrowserRouter>
   );

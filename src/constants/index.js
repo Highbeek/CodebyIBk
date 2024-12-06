@@ -45,6 +45,7 @@ import {
   gift,
   bibleQ,
   furex,
+  squaremeWeb,
 } from "../assets";
 
 export const navLinks = [
@@ -263,7 +264,7 @@ const projects = [
       },
     ],
     image: gift,
-    source_code_link: "/",
+    source_code_link: "",
     livepage_link: "https://www.giftawoh.com/",
   },
   {
@@ -284,7 +285,7 @@ const projects = [
       },
     ],
     image: spoutBg,
-    source_code_link: "/",
+    source_code_link: "",
     livepage_link:
       "https://play.google.com/store/search?q=spoutpay&c=apps&hl=en_US",
   },
@@ -307,7 +308,7 @@ const projects = [
       },
     ],
     image: umraDash,
-    source_code_link: "/",
+    source_code_link: "",
     livepage_link: "https://umra-doctors-app.vercel.app/dashboard",
   },
   {
@@ -329,7 +330,7 @@ const projects = [
       },
     ],
     image: umraPage,
-    source_code_link: "/",
+    source_code_link: "",
     livepage_link: "https://umra-landing-page.vercel.app/",
   },
   {
@@ -353,6 +354,28 @@ const projects = [
     image: squaremeBg,
     source_code_link: "https://squareme.app/",
     livepage_link: "https://youtu.be/8ivbYXFlgUU",
+  },
+  {
+    name: "Squareme Landing page | P2P Payment App",
+    description:
+      "Simplify money transfers between friends with ease and security.\nAvailable on app store and google store",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "animation,gsap,framer",
+        color: "green-text-gradient",
+      },
+      {
+        name: "taiwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: squaremeWeb,
+    source_code_link: "",
+    livepage_link: "https://squareme.app/",
   },
   {
     name: "Payday Clone",
