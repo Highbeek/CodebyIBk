@@ -213,10 +213,19 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I would like to speciallly thank Only Ibukun in the frontend team who was ready with zeal to deliver regardless weather he knows it all or not and i appreciate that will both didnt regret the journey.",
+      "Special thanks to Ibukun from the frontend team for his unwavering dedication and proactive approach. His ability to tackle challenges with confidence and deliver exceptional results was truly commendable.",
     name: "Yemi O.FCAS",
     designation: "Senior Developer",
     company: "De-Benedict NGO",
+    image:
+      "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
+  },
+  {
+    testimonial:
+      "Ibukun’s expertise and attention to detail were instrumental in the success of the SquareMe mobile app. He delivered exceptional results under tight deadlines.",
+    name: "Valentine Ezike",
+    designation: "Engineering Manager",
+    company: "SquareMe",
     image:
       "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
   },
